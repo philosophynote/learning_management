@@ -18,9 +18,9 @@
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="../css/mdb.min.css" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
       <!-- Main Navigation-->
@@ -60,7 +60,7 @@
                 <br>
                 <br>
                 <div class="text-center">
-                  <a href="./user/signin.php" >アカウント新規作成はこちら</a>
+                  <a href="../user/signin.php" >アカウント新規作成はこちら</a>
                 </div>
               </form>
             </div>
@@ -68,22 +68,14 @@
         </div>
       </div>
     </div>
-    <video src="img/code.mp4"  autoplay loop muted ></video>
+    <video src="../img/code.mp4"  autoplay loop muted ></video>
   </header>
-
-    
-    
-
-    <!-- Background image -->
-
-    <!-- Background image -->
-
   <!--Main Navigation-->
 
     <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
     <script>
       'use strict';
       const forms = document.querySelectorAll('.needs-validation');

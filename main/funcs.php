@@ -11,20 +11,17 @@ function h($str){
 //DB接続関数：db_conn()
 function db_conn(){
     try {
-        $db_name = $_SERVER['SERVER_NAME'] == "localhost" ? "learn_management" : ENV['db_name'];    //データベース名
-        $db_id   = $_SERVER['SERVER_NAME'] == "localhost" ? "root" : ENV['db_id'];      //アカウント名
-        $db_pw   = $_SERVER['SERVER_NAME'] == "localhost" ? "root" : ENV['db_pw'];      //パスワード：XAMPPはパスワード無しに修正してください。
-        $db_host = $_SERVER['SERVER_NAME'] == "localhost" ? "localhost" : ENV['db_host']; //DBホスト
-    //     echo($db_name,$db_id,$db_pw,$db_host);
+        $db_name = $_SERVER['SERVER_NAME'] == "localhost" ? "learn_management" : $_ENV['db_name'];    //データベース名
+        $db_id   = $_SERVER['SERVER_NAME'] == "localhost" ? "root" : $_ENV['db_id'];      //アカウント名
+        $db_pw   = $_SERVER['SERVER_NAME'] == "localhost" ? "root" : $_ENV['db_pw'];      //パスワード：XAMPPはパスワード無しに修正してください。
+        $db_host = $_SERVER['SERVER_NAME'] == "localhost" ? "localhost" : $_ENV['db_host']; //DBホスト
+
         return new PDO('mysql:dbname='.$db_name.';charset=utf8;host='.$db_host, $db_id, $db_pw);
     }catch (PDOException $e) {
         exit('DB Connection Error:'.$e->getMessage());
     }
 }
-        // return new PDO('mysql:dbname='.$db_name.';charset=utf8;host='.$db_host, $db_id, $db_pw);
-    // } catch (PDOException $e) {
-    //     exit('DB Connection Error:'.$e->getMessage());
-    // }
+
 
 
 

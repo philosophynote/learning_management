@@ -1,5 +1,5 @@
 <?php
-  include("../funcs.php");
+  include("../main/funcs.php");
 ?>
 <?php include("html/header.html");?>
 <!-- Main[Start] -->
@@ -47,16 +47,12 @@
                     </tr>
                   </table>
                   <p class="cms-thumb"><img src="https://placehold.jp/c9c9c9/ffffff/600×600.png?text=登録画像" width="200"></p>
-                  <!-- <label>サムネイル：<input type="file" name="fname" class="cms-item" accept="image/*"></label><br>
-                  <br> -->
-                  <!-- <div class="form-outline mb-4"> -->
                     <img id="captcha" src="../securimage/securimage_show.php">
                     <br>
                     <br>
                     <input type="text" class="form-control" name="captcha_code" placeholder="表示されている文字を入力してください" required>
                     <br>
                     <button class="btn btn-outline-secondary btn-block" type="button" id="button">画像再生成</button>
-                  <!-- </div> -->
                   <br>
                   <input type="hidden" name="kanri_flg" value="0">
                   <input type="hidden" name="life_flg" value="1">
@@ -65,7 +61,7 @@
                   <br>
                 </form>
                 <br>
-                <a href="../toppage.php" class="btn btn-outline-danger btn-block">ログイン画面に戻る</a>
+                <a href="../main/toppage.php" class="btn btn-outline-danger btn-block">ログイン画面に戻る</a>
               </div>
           </div>
         </div>

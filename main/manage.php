@@ -1,6 +1,4 @@
 <?php
-//【重要】
-//insert.phpを修正（関数化）してからselect.phpを開く！！
 include("funcs.php");
 session_start();
 $username = $_SESSION["name"];
@@ -9,8 +7,7 @@ $userid = $_SESSION['user_id'];
 
 if (isset($userid)) {//ログインしているとき
     $msg = 'こんにちは' . h($username) . 'さん';
-    $img ='<img src="./img/'.$fname.'" alt="" width=200 height=100 class="rounded-circle"  loading="lazy">';
-    // $img ='<img src="./img/'.'hada.jpeg'.'" alt="" width=200 height=100 class="rounded-circle"  loading="lazy">';
+    $img ='<img src="../img/'.$fname.'" alt="" width=200 height=100 class="rounded-circle"  loading="lazy">';
     $link = '<a href="logout.php" class="d-block btn btn-outline-info btn-rounded">ログアウト</a>';
 } else {//ログインしていない時
     $msg = 'ログインしていません';
@@ -21,15 +18,14 @@ if (isset($userid)) {//ログインしているとき
 $pdo = db_conn();
 
 
-//２．データ登録SQL作成
+//該当するユーザの情報を引っ張る
 $sql= "SELECT * FROM learn_tb JOIN user_table ON learn_tb.User_id = user_table.user_id WHERE learn_tb.User_id={$userid}";
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
-
 $data_array=Array();
 $Date=Array();
-//３．データ表示
+//データ表示
 $view="";
 if($status==false) {
   sql_error($stmt);
@@ -58,7 +54,6 @@ array_multisort($Date, SORT_DESC, $data_array);
 
 $json_data=json_encode($data_array);
 
-
 $_SESSION["user_id"]   = $userid;
 $_SESSION["name"]      = $username;
 $_SESSION["fname"]     = $fname;
@@ -74,13 +69,13 @@ $_SESSION["fname"]     = $fname;
     <title>学習時間管理アプリ</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <link rel="icon" type="image/png" href="img/pencil.ico" />
+    <link rel="icon" type="image/png" href="../img/pencil.ico" />
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="../css/mdb.min.css" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
     <!-- <jQuery> -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -90,12 +85,12 @@ $_SESSION["fname"]     = $fname;
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
     <!-- テーブルソート用 -->
-    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="./js/jquery.tablesorter.min.js"></script>
     <!-- グラフ用 -->
     <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>
     <!-- googleカレンダー用 -->
-    <link href='lib/main.css' rel='stylesheet' />
-    <link rel="stylesheet" href="css/style.css" />
+    <link href='../lib/main.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
     <!--Main Navigation-->
@@ -125,9 +120,6 @@ $_SESSION["fname"]     = $fname;
                   <a href="#Calender" class="list-group-item list-group-item-action py-2 ripple">
                       <i class="fas fa-calendar-alt fa-fw me-3"></i><span>Calender</span>
                   </a>
-                  <!-- <a href="user/userdetail.php?id=<//?php echo $userid ?>" class="list-group-item list-group-item-action py-2 ripple">
-                      <i class="fas fa-cog fa-fw me-3"></i><span>Setting</span>
-                  </a> -->
               </div>
           </div> 
       </nav>
@@ -138,9 +130,9 @@ $_SESSION["fname"]     = $fname;
   <!--Main layout-->
   <main>
     <div class="container pt-4 main bgc" data-mdb-spy="scroll" data-mdb-target="#sidebar-list" data-mdb-offset="0">
-      <?php include("html/stopwatch.html");?>
-      <?php include("html/timer.html");?>
-      <?php include("html/todolist.html");?>
+      <?php include("../html/stopwatch.html");?>
+      <?php include("../html/timer.html");?>
+      <?php include("../html/todolist.html");?>
       <!--Section: Diary-->
       <section class="mb-4" id="Diary">
         <div class="card">
@@ -386,7 +378,7 @@ $_SESSION["fname"]     = $fname;
         </div>
       </section>
 
-      <?php include("html/calender.html");?>
+      <?php include("../html/calender.html");?>
     </div>
   </main>
   <!--Main layout-->
@@ -628,4 +620,4 @@ $_SESSION["fname"]     = $fname;
     });
 
   </script>
-<?php include("html/footer.html");?>
+<?php include("../html/footer.html");?>

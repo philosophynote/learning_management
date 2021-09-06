@@ -2,7 +2,7 @@
 //１．PHP
 //select.phpのPHPコードをマルっとコピーしてきます。
 //※SQLとデータ取得の箇所を修正します。
-include("../funcs.php");
+include("../main/funcs.php");
 session_start();
 $pdo = db_conn();
 

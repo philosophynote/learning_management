@@ -1,7 +1,7 @@
 <?php
 //【重要】
 //insert.phpを修正（関数化）してからselect.phpを開く！！
-include("../funcs.php");
+include("../main/funcs.php");
 $pdo = db_conn();
 
 //２．データ登録SQL作成

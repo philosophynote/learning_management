@@ -1,5 +1,5 @@
 <?php include("funcs.php");?>
-<?php include("user/html/header.html");?>
+<?php include("./user/html/header.html");?>
 <?php
 //必ずsession_startは最初に記述
 session_start();
@@ -20,4 +20,4 @@ redirect("toppage.php");
 exit();
 
 ?>
-<?php include("user/html/footer.html");?>
+<?php include("./user/html/footer.html");?>

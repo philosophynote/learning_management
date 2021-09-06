@@ -1,7 +1,7 @@
 <?php
 
 //最初に読み込む
-include("../funcs.php");
+include("..//main/funcs.php");
 //1. POSTデータ取得
 $id = $_GET["id"];
 

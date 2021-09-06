@@ -1,6 +1,6 @@
 <?php
 //最初に読み込む
-include("../funcs.php");
+include("../main/funcs.php");
 //パスワードの暗号化
 $hash_pass = password_hash(h($_POST['lpw']), PASSWORD_DEFAULT);
 echo $hash_pass;
@@ -57,6 +57,6 @@ if($status==false){
     sql_error($stmt);
 }else{
     //*** function化する！*****************
-    redirect("../toppage.php");
+    redirect("../main/toppage.php");
 }
 

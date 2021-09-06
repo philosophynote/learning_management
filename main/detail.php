@@ -12,8 +12,7 @@ $fname = $_SESSION["fname"];
 $userid = $_SESSION['user_id'];
 if (isset($userid)) {//ログインしているとき
     $msg = 'こんにちは' . h($username) . 'さん';
-    $img ='<img src="./img/'.$fname.'" alt="" width=200 height=100 class="rounded-circle"  loading="lazy">';
-    // $img ='<img src="./img/'.'hada.jpeg'.'" alt="" width=200 height=100 class="rounded-circle"  loading="lazy">';
+    $img ='<img src="../img/'.$fname.'" alt="" width=200 height=100 class="rounded-circle"  loading="lazy">';
     $link = '<a href="logout.php" class="d-block btn btn-outline-info btn-rounded">ログアウト</a>';
 } else {//ログインしていない時
     $msg = 'ログインしていません';
@@ -21,8 +20,8 @@ if (isset($userid)) {//ログインしているとき
 }
 
 //GET受信
-$id = $_GET["id"]; //id=**
-// $id = 1;
+$id = $_GET["id"]; 
+
 
 //２．データ登録SQL作成
 $stmt = $pdo->prepare("SELECT * FROM learn_tb WHERE Learn_id=:Learn_id");
@@ -38,15 +37,7 @@ if($status==false) {
   $r = $stmt->fetch();
 }
 ?>
-<!--
-２．HTML
-以下にindex.phpのHTMLをまるっと貼り付ける！
-理由：入力項目は「登録/更新」はほぼ同じになるからです。
-※form要素 input type="hidden" name="id" を１項目追加（非表示項目）
-※form要素 action="update.php"に変更
-※input要素 value="ここに変数埋め込み"
 
--->
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -57,13 +48,13 @@ if($status==false) {
     <title>学習時間管理アプリ</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <link rel="icon" type="image/png" href="img/pencil.ico" />
+    <link rel="icon" type="image/png" href="../img/pencil.ico" />
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="../css/mdb.min.css" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
     <!-- <jQuery> -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -73,12 +64,12 @@ if($status==false) {
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
     <!-- テーブルソート用 -->
-    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="../js/jquery.tablesorter.min.js"></script>
     <!-- グラフ用 -->
     <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>
     <!-- googleカレンダー用 -->
-    <link href='lib/main.css' rel='stylesheet' />
-    <link rel="stylesheet" href="css/style.css" />
+    <link href='../lib/main.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
     <!--Main Navigation-->
@@ -108,9 +99,6 @@ if($status==false) {
                   <a href="#Calender" class="list-group-item list-group-item-action py-2 ripple">
                       <i class="fas fa-calendar-alt fa-fw me-3"></i><span>Calender</span>
                   </a>
-                  <!-- <a href="user/userdetail.php?id=<//?php echo $userid ?>" class="list-group-item list-group-item-action py-2 ripple">
-                      <i class="fas fa-cog fa-fw me-3"></i><span>Setting</span>
-                  </a> -->
               </div>
           </div> 
       </nav>
@@ -199,7 +187,7 @@ if($status==false) {
   </main>
 <!-- Main[End] -->
 
-  <?php include("html/footer.html");?>
+  <?php include("../html/footer.html");?>
 </body>
 </html>
 

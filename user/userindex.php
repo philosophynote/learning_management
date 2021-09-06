@@ -1,5 +1,5 @@
 <?php
-  include("../funcs.php");
+  include("../main/funcs.php");
 ?>
 <?php include("html/header.html");?>
 <!-- Main[Start] -->
