@@ -1,0 +1,58 @@
+      <!--Section: Timer-->
+      <section class="mb-4" id="Timer">
+        <div class="card">
+          <div class="card-header text-center py-3 bg-info">
+            <h5 class="mb-0 text-center">
+              <strong>Timer</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <p id="timer" class="display-1 text-center">00:00:00</p>
+            <audio src="timer.mp3" id="audio" pause="pause" loop="loop"></audio>
+            <br>
+            <div class="d-flex justify-content-evenly">
+              <button type="button" class="btn btn-outline-info btn-rounded" data-mdb-toggle="modal"
+                data-mdb-target="#TimerModal">set</button>
+              <!--モーダルウィンドウ-->
+              <div class="modal fade" id="TimerModal" tabindex="-1" aria-labelledby="TimerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="TimerModalLabel">時間をセットしてください</h5>
+                      <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="d-flex justify-content-between">
+                        <div class="form-outline">
+                          <input type="number" id="timerHour" class="form-control" name="timerHour" />
+                          <label class="form-label" for="typeNumber">時間</label>
+                        </div>
+                        <div class="form-outline">
+                          <input type="number" id="timerMinute" class="form-control" name="timerMinute" />
+                          <label class="form-label" for="typeNumber">分</label>
+                        </div>
+                        <div class="form-outline">
+                          <input type="number" id="timerSecond" class="form-control" name="timerSecond" />
+                          <label class="form-label" for="typeNumber">秒</label>
+                        </div>
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <input id="timerset" type="submit" name="btn_submit" value="OK"
+                        class="btn btn-outline-info btn-rounded" data-mdb-dismiss="modal" aria-label="Close">
+                      <!-- <button type="button" class="btn btn-outline-info btn-rounded">OK</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--モーダルウィンドウ終わり-->
+              <button id="timerstart" type="button" class="btn btn-outline-info btn-rounded">start</button>
+              <button id="timerstop" type="button" class="btn btn-outline-info btn-rounded">stop</button>
+              <button id="timerreset" type="button" class="btn btn-outline-info btn-rounded">reset</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Timer-->

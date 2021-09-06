@@ -1,0 +1,167 @@
+      <!--Section: Stastics-->
+      <section class="mb-4" id="Chart">
+        <div class="card">
+          <div class="card-header text-center py-3 bg-info">
+            <h5 class="mb-0 text-center">
+              <strong>Chart</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div>
+              <div id="studyGraph_7" class="justify-content-between" ></div>
+            </div>
+            <div>
+              <div id="studyGraph_30" class="justify-content-between"></div>
+            </div>
+            <br>
+            <br>
+            <table class="table text-center">
+              <tr class="table-info ">
+                <th>名称</th>
+                <th>学習時間(直近1週間)</th>
+                <th>学習時間(直近1か月)</th>
+              </tr>
+              <tr>
+                <td>合計値</td>
+                <td id="sum_7"></td>
+                <td id="sum_30"></td>
+              </tr>
+              <tr>
+                <td>平均値</td>
+                <td id="average_7"></td>
+                <td id="average_30"></td>
+              </tr>
+              <tr>
+                <td>最大値</td>
+                <td id="max_7"></td>
+                <td id="max_30"></td>
+              </tr>
+              <tr>
+                <td>最小値</td>
+                <td id="min_7"></td>
+                <td id="min_30"></td>
+              </tr>
+            </table>
+            <br>
+            <label class="pt-1 pr-1">時間換算</label>
+            <div class="form-outline">
+              <input type="number" id="TimeConvert" class="form-control" placeholder="時間（ミリ秒）を入力してください" />
+              <label class="form-label" for="typeNumber"></label>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="col-3">
+                <div class="d-flex justify-content-end">
+                  <p id="RecordHour"></p>
+                  <p>時間</p>
+                </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-3">
+                <div class="d-flex justify-content-end">
+                  <p id="RecordMinute"></p>
+                  <p>分</p>
+                </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-3">
+                <div class="d-flex justify-content-end">
+                  <p id="RecordSecond"></p>
+                  <p>秒</p>
+                </div>
+              </div>
+              <div class="col-1"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Stastics-->
+      <!--Section: MiniStatics-->
+      <section>
+        <div class="row">
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <i class="fas fa-map-signs text-info fa-3x me-4"></i>
+                    </div>
+                    <div>
+                      <h4>Average Learning Time</h4>
+                      <p class="mb-0">Just do it!</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <h2 class="h3 mb-0" id="average_all"></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <i class="fas fa-chart-line text-warning fa-3x me-4"></i>
+                    </div>
+                    <div>
+                      <h5>Cumulative Learning Time</h5>
+                      <p class="mb-0">Curiousity Drives Us Forward.</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <h2 class="h3 mb-0" id="sum_all"></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <h2 class="h1 mb-0 me-4" id="OIR">1</h2>
+                    </div>
+                    <div>
+                      <h4>Output/Input Ratio</h4>
+                      <p class="mb-0">Deploy or Die!</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <i class="fas fa-pen text-danger fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between p-md-1">
+                  <div class="d-flex flex-row">
+                    <div class="align-self-center">
+                      <h2 class="h1 mb-0 me-4" id="continus_days"></h2>
+                    </div>
+                    <div>
+                      <h4>Cumulative days</h4>
+                      <p class="mb-0">Yes, We Can!</p>
+                    </div>
+                  </div>
+                  <div class="align-self-center">
+                    <i class="far fa-user text-success fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: MiniStatics-->

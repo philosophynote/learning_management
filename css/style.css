@@ -1,0 +1,116 @@
+
+/* サイドバー */
+body {
+  position: relative;
+}
+
+.sidebar{
+    padding-top: 0;
+}
+
+.profile-img{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* グラフ・表 */
+
+
+
+
+/* 日付入力画面：flatpicker */
+/* 日曜日：赤 */
+.flatpickr-calendar .flatpickr-innerContainer .flatpickr-weekdays .flatpickr-weekday:nth-child(7n + 1),
+.flatpickr-calendar .flatpickr-innerContainer .flatpickr-days .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n + 1) {
+    color: red;
+}
+ 
+/* 土曜日：青 */
+.flatpickr-calendar .flatpickr-innerContainer .flatpickr-weekdays .flatpickr-weekday:nth-child(7),
+.flatpickr-calendar .flatpickr-innerContainer .flatpickr-days .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n) {
+    color: blue;
+}
+
+.flatpickr-current-month {
+  display: flex;
+  justify-content: center;
+}
+
+.cur-year {
+  order : 1;
+}
+
+.cur-month:before  {
+   content: '年　';
+}
+
+.cur-month {
+  order: 2;
+}
+
+.flatpickr-current-month span.cur-month {
+  font-weight : 300;
+  padding-top : 4px;
+}
+/* 日付入力画面：微調整 */
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: 5px;
+}
+
+/* google calender */
+#loading {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+#calendar {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* TODOリスト */
+
+
+.incomplete-area button{
+  color:#000;
+  border-radius:1rem;
+}
+
+.complete-area button{
+  color:#000;
+  border-radius:1rem;
+}
+
+.list-group .active{
+  background-color: #39c0ed !important;
+}
+
+/* toppage背景 */
+.topheader{
+  position: relative;
+}
+
+header video{
+  object-fit: cover;
+  object-position: center top;
+  opacity: var(--video-opacity);
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+}
+
+.topheader{
+  position: absolute;
+  z-index: 100;
+}
+
+.topheader .container{
+  position: relative;
+  z-index: 100;
+}
+
+.bgc{
+  background-color: #f8f8f8;
+}
