@@ -1,4 +1,5 @@
 # LearningManagement
+- https://philosophy-note.sakura.ne.jp/kadai10/main/toppage.php
 - 学習時間・内容を記録するサイトです。
 - 学習した時間・内容を登録・参照することができるとともに棒グラフなどで可視化できます。
 - ストップウォッチやタイマーも搭載しているので、このサイト内で学習時間の記録は完成します。
